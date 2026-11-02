@@ -1,5 +1,17 @@
 <script lang="ts">
-  // 👉 PESSOA 2 (Formato dos Dados - TS(Leandro)): Cria a interface TypeScript aqui.
+ // 👉 PESSOA 2 (Formato dos Dados - TS(Leandro)): Cria a interface TypeScript aqui. Ready Ok
+  interface Nave {
+    shipName: string;
+    shields: number;
+    thrusters: number;
+    weapons: number;
+    life: number;
+    cooling: boolean;
+    stealth: boolean;
+    warp: boolean;
+    lookingBack: boolean;
+  }
+ 
   // 👉 PESSOA 3 (Memória - Reatividade(Matheus)): Cria as variáveis $state e $derived aqui.
   // 👉 PESSOA 4 (Regras - Funções(Pedro)): Cria as funções de clique e presets aqui.
   let warp = false;
