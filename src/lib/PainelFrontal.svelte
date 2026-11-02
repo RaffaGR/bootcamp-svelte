@@ -19,14 +19,14 @@
   let shipName = "SS Svelte-V";
 </script>
 
-<section class="painel-frontal">
+<section class="cabin-face cabin-front painel-frontal" id="cabinFront">
   <!-- 👉 PESSOA 5 (Botões e Campos(Patrick)): Conecta os inputs e botões com bind:value e onclick aqui. -->
-  <!-- 👉 PESSOA 6 (Exibição HTML(João Vitor)): Aplica os blocos dinâmicos {#if} e {#each} aqui. -->
+  <!-- PESSOA 6 (Exibição HTML(João Vitor)): Aplica os blocos dinâmicos {#if} e {#each} aqui. -->
   <div class="ship-motion-rig" id="shipMotionRig">
     <!-- 1. PARA-BRISA SUPERIOR -->
     <div class="canopy-section">
       <canvas id="spaceCanvas"></canvas>
-      <!-- 🧹 LIMPEZA 1: Trocando dezenas de spans por um {#each} -->
+      <!-- LIMPEZA 1: Trocando dezenas de spans por um {#each} -->
       <div class="ceiling-amber-lights">
         {#each Array(6) as _}<span></span>{/each}
       </div>
@@ -62,7 +62,7 @@
         <div class="monitor-unit monitor-left-unit">
           <div class="top-red-bar"></div>
           <div class="monitor-body-row">
-            <!-- 🧹 LIMPEZA 2: {#each} -->
+            <!-- LIMPEZA 2: {#each} -->
             <div class="led-column" id="ledsLeftOuter">
               {#each Array(6) as _}<span></span>{/each}
             </div>
@@ -224,8 +224,8 @@
           <!-- Sub-Painel Central Inferior (Anel Laranja do Reator + Alertas {#if}) -->
           <div class="crt-screen screen-center-bottom" id="centerBottomScreen">
             <div class="reactor-left-stats">
-              <span class="sys-tag" id="tagCooling">❄️ REFRIG: OFF</span>
-              <span class="sys-tag" id="tagStealth">🕵️ STEALTH: OFF</span>
+              <span class="sys-tag" id="tagCooling"> REFRIG: OFF</span>
+              <span class="sys-tag" id="tagStealth"> STEALTH: OFF</span>
             </div>
 
             <!-- Medidor Circular Laranja do Reator (Igual ao centro-baixo da foto) -->
@@ -238,15 +238,15 @@
             </div>
 
             <div class="reactor-right-alert">
-              <!-- 🧠 LÓGICA 1: Trocando texto fixo pelo bloco {#if} -->
+              <!--  LÓGICA 1: Trocando texto fixo pelo bloco {#if} -->
               <span class="sys-tag">
-                🌌 DOBRA: {#if warp}
+                 DOBRA: {#if warp}
                   ON
                 {:else}
                   OFF
                 {/if}
               </span>
-              <!-- 🧠 LÓGICA 2: Alerta dinâmico de sobrecarga -->
+              <!--  LÓGICA 2: Alerta dinâmico de sobrecarga -->
               <strong class="live-alert-badge">
                 {#if totalEnergy > 100}
                   🚨 SOBRECARGA
@@ -311,13 +311,13 @@
               </div>
               <div class="screen-bottom-wave">
                 <button class="btn-inline-tutorial" id="btnScreenTutorial">
-                  ✨ Clique aqui ou no topo para virar para trás e ver o
+                   Clique aqui ou no topo para virar para trás e ver o
                   Tutorial Svelte 5
                 </button>
               </div>
             </div>
 
-            <!-- 🧹 LIMPEZA 4: {#each} -->
+            <!--  LIMPEZA 4: {#each} -->
             <div class="led-column" id="ledsRightOuter">
               {#each Array(6) as _}<span></span>{/each}
             </div>
@@ -337,7 +337,7 @@
           <div class="throttle-and-sliders">
             <div class="throttle-box">
               <label for="thrustersInput"
-                >🚀 ACELERADOR (PROPULSORES): <strong id="lblThrusters"
+                > ACELERADOR (PROPULSORES): <strong id="lblThrusters"
                   >25%</strong
                 ></label
               >
@@ -355,7 +355,7 @@
             <!-- Fileira de Botões Quadrados Laranjas e Azuis (Igual ao canto inferior esquerdo da foto!) -->
             <div class="throttle-box">
               <label for="shieldsInput"
-                >🛡️ ESCUDOS DEFLETORES: <strong id="lblShields">30%</strong
+                > ESCUDOS DEFLETORES: <strong id="lblShields">30%</strong
                 ></label
               >
               <input
@@ -379,12 +379,12 @@
             <button
               class="glow-pad amber-pad"
               data-boost="thrusters"
-              title="+10% Propulsão">🚀 +IMP</button
+              title="+10% Propulsão"> +IMP</button
             >
             <button
               class="glow-pad cyan-pad"
               data-boost="balance"
-              title="Estabilizar">⚖️ ESTAB</button
+              title="Estabilizar"> ESTAB</button
             >
           </div>
         </div>
@@ -410,12 +410,12 @@
           <div class="center-switches-grid">
             <label class="deck-switch">
               <input type="checkbox" id="coolingCheck" />
-              <span class="switch-key cyan-key">❄️ REFRIGERAÇÃO</span>
+              <span class="switch-key cyan-key"> REFRIGERAÇÃO</span>
             </label>
 
             <label class="deck-switch">
               <input type="checkbox" id="stealthCheck" />
-              <span class="switch-key cyan-key">🕵️ CAMUFLAGEM</span>
+              <span class="switch-key cyan-key"> CAMUFLAGEM</span>
             </label>
 
             <label class="deck-switch full-span">
@@ -471,7 +471,7 @@
           <div class="right-sliders-compact">
             <div class="compact-slider-row" id="weaponsBox">
               <label for="weaponsInput"
-                >⚔️ CANHÕES: <strong id="lblWeapons">15%</strong></label
+                > CANHÕES: <strong id="lblWeapons">15%</strong></label
               >
               <input
                 type="range"
@@ -484,7 +484,7 @@
             </div>
             <div class="compact-slider-row">
               <label for="lifeInput"
-                >🌱 OXIGÊNIO (O₂): <strong id="lblLife">20%</strong></label
+                > OXIGÊNIO (O₂): <strong id="lblLife">20%</strong></label
               >
               <input
                 type="range"

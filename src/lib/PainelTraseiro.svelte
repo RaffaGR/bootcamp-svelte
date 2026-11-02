@@ -19,11 +19,11 @@
       <div class="holo-header">
         <div>
           <span class="holo-tag">HOLOGRAMA TRASEIRO DA NAVE // MODO AULA</span>
-          <h2>✨ Tutorial Interativo: O Segredo do Svelte 5</h2>
+          <h2> Tutorial Interativo: O Segredo do Svelte 5</h2>
         </div>
 
         <div class="holo-tabs">
-          <!-- 🧠 LÓGICA 3: O Svelte altera a classe dinamicamente caso a aba esteja ativa -->
+          <!--  LÓGICA 3: O Svelte altera a classe dinamicamente caso a aba esteja ativa -->
           <!-- O "on:click" é o equivalente do Svelte ao (click) do Angular -->
           <button
             class="holo-tab"
@@ -59,14 +59,14 @@
         </div>
 
         <button class="btn-return-front" id="btnReturnFront">
-          🔄 Virar para Frente (Voltar ao Painel)
+           Virar para Frente (Voltar ao Painel)
         </button>
       </div>
 
       <div class="holo-quick-bar">
-        <span>🎮 Teste mexer aqui mesmo e veja o código Svelte reagir:</span>
+        <span> Teste mexer aqui mesmo e veja o código Svelte reagir:</span>
         <label
-          >🛡️ Escudos <input
+          > Escudos <input
             type="range"
             id="holoShields"
             min="0"
@@ -75,7 +75,7 @@
           /></label
         >
         <label
-          >🚀 Propulsores <input
+          > Propulsores <input
             type="range"
             id="holoThrusters"
             min="0"
@@ -84,7 +84,7 @@
           /></label
         >
         <label
-          >⚔️ Armas <input
+          > Armas <input
             type="range"
             id="holoWeapons"
             min="0"
@@ -95,7 +95,7 @@
         <label><input type="checkbox" id="holoWarp" /> 🌌 Dobra 4x</label>
       </div>
 
-      <!-- 🧠 LÓGICA 4: O bloco {#if} controla o que aparece na tela do holograma dependendo do menu selecionado -->
+      <!--  LÓGICA 4: O bloco {#if} controla o que aparece na tela do holograma dependendo do menu selecionado -->
 
       {#if activeTab === "livecode"}
         <!-- ABA HOLO 1: CÓDIGO SVELTE 5 AO VIVO -->
@@ -123,14 +123,14 @@
                 >(
     shields + thrusters + weapons + life
   ); <span class="hc-com"
-                  >// 👉 Agora: <span class="hc-live" id="hcTotal">90</span
+                  >// Agora: <span class="hc-live" id="hcTotal">90</span
                   >%</span
                 >
 
   <span class="hc-kw">let</span> speed = <span class="hc-fn">$derived</span>(
     thrusters * 12 * (warp ? 4 : 1)
   ); <span class="hc-com"
-                  >// 👉 Agora: <span class="hc-live" id="hcSpeed">300</span
+                  >// Agora: <span class="hc-live" id="hcSpeed">300</span
                   > km/s</span
                 >
 <span class="hc-com">&lt;/script&gt;</span>
@@ -154,7 +154,7 @@
 
             <div class="holo-explain-cards">
               <div class="holo-card">
-                <h3>🔥 O que vocês provam para a sala?</h3>
+                <h3> O que vocês provam para a sala?</h3>
                 <p>
                   Todo aquele cockpit espacial da frente — os 3 monitores, os
                   medidores laranjas, os botões giratórios e o balanço da nave —
@@ -162,7 +162,7 @@
                 </p>
               </div>
               <div class="holo-card">
-                <h3>⚡ Sem tocar no DOM</h3>
+                <h3> Sem tocar no DOM</h3>
                 <p>
                   No JavaScript tradicional, cada mudança exige atualizar 20
                   elementos na mão. No <strong>Svelte 5</strong>, você muda
